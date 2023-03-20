@@ -13,6 +13,10 @@ namespace MontyHall.Controllers
     [RoutePrefix("api/calculate")]
     public class MontyHallController : ApiController
     {
+        public MontyHallController() 
+        { 
+            // Här kan man ha loggning och annat
+        }
         [ResponseType(typeof(WinLoose))]
         [System.Web.Http.Route("simulations")]
         public IHttpActionResult Get(int simulations, int doorChange) 
